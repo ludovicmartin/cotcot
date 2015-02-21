@@ -1,0 +1,5 @@
+<phpunit bootstrap="./bootstrap.php">
+    <testsuite name="cotcot">
+        <directory>./cotcotTest</directory>
+    </testsuite>
+</phpunit>

@@ -1,0 +1,27 @@
+{
+    "name": "ludovicmartin.fr/cotcot",
+    "type": "library",
+    "keywords": ["dependency injection"],
+    "description": "Lightweight dependency injection framework for PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ludovic Martin",
+            "email": "contact@ludovicmartin.fr",
+            "homepage": "http://www.ludovicmartin.fr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "PHP": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "cotcot\\": "src/",
+            "cotcotTest\\": "tests/cotcotTest/"
+        }
+    }
+}
