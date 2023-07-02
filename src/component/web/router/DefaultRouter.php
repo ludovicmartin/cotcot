@@ -64,7 +64,7 @@ class DefaultRouter extends Router {
                 $matches = true;
                 for ($i = 0; $i < $ruleItemCount; $i++) {
                     if ($ruleItems[$i] !== $routeItems[$i]) {
-                        if (strlen($ruleItems[$i]) && $ruleItems[$i]{0} === ':') {
+                        if (strlen($ruleItems[$i]) && $ruleItems[$i][0] === ':') {
                             $parameters[substr($ruleItems[$i], 1)] = $routeItems[$i];
                         } else {
                             $matches = false;
