@@ -7,7 +7,7 @@ The core is very light (1 class and 2 interfaces only !) but it comes with many 
 //Build a configuration
 $config = [ /* ... the configuration... */ ];
 
-//Build a runtime contact
+//Build a runtime context
 $context = new \cotcot\core\RuntimeContext($config);
 
 //Get a component
