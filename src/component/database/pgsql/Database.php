@@ -37,7 +37,7 @@ class Database extends \cotcot\component\database\Database {
             $connectionString[] = 'dbname=' . $this->params->databaseName;
         }
         $handle = pg_connect(implode(' ', $connectionString));
-        if (is_resource($handle)) {
+        if ($handle !== false) {
             $this->handle = $handle;
             if ($this->params->encoding !== null) {
                 pg_set_client_encoding($this->handle, $this->params->encoding);
@@ -59,7 +59,7 @@ class Database extends \cotcot\component\database\Database {
 
     public function query($query) {
         $result = pg_query($this->handle, $query);
-        if (is_resource($result)) {
+        if ($result !== false) {
             $resultSet = new ResultSet();
             $resultSet->result = $result;
             return $resultSet;
